@@ -11,11 +11,12 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;
 }
+
 
 /* variables */
 $nav-bg: rgba(217, 217, 217, 0.5);
@@ -40,27 +41,20 @@ $sub-heading: rgba(40, 40, 40, 0.7);
 
 .hero-section {
     background: $bg;
-    
+
 
     .hero-content {
         max-width: 995px;
 
         h2 {
-            font-weight: 500;
-            font-size: 70px;
             color: $heading-color;
-            text-align: center;
 
             span {
-                font-size: 70px;
-                font-weight: 700;
+                color: #282828;
             }
         }
 
         p {
-            font-weight: 500;
-            font-size: 22px;
-            text-align: center;
             color: $sub-heading;
         }
 
@@ -74,15 +68,15 @@ $sub-heading: rgba(40, 40, 40, 0.7);
         }
 
         ul li a {
-            font-weight: 500;
-            font-size: 22px;
+            color: $heading-color;
         }
     }
 }
 
+
+
 .home-sec {
     background: $bg;
-    position: relative;
     #background-div {
         background: linear-gradient(90.51deg, #87CEFA 3.78%, #2A0896 96.65%);
         border-radius: 30px;
@@ -90,9 +84,13 @@ $sub-heading: rgba(40, 40, 40, 0.7);
         width: 1550.34px;
         height: 538.85px;
         position: absolute;
-      }
+    }
+      
+    
+      
+
     .home-card {
-        z-index: 1;
+        position: relative;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
         border-radius: 29px;
 
@@ -104,44 +102,30 @@ $sub-heading: rgba(40, 40, 40, 0.7);
 
         .home-card--left {
             a {
-                font-weight: 400;
-                font-size: 14px;
-
                 color: #2397F3;
             }
         }
 
         .home-card--right {
             .inbox {
-                font-weight: 400;
-                font-size: 21.5385px;
+                @apply text-2xl font-normal;
                 color: #2397F3;
             }
 
-            .filter-btn {
-                padding: 2px 10px;
+            .second-btn {
+                color: #ffffff;
                 background: #2397F3;
                 border-radius: 3px;
-                color: #ffffff;
-                margin-right: 10px;
             }
-
-            .filter-btn--first {
-                padding: 2px 10px;
+            .first-btn {
                 background: #C5C2C2;
                 border-radius: 3px;
                 color: #ffffff;
-                margin-right: 10px;
             }
 
             .filter-label {
                 box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.05);
                 border-radius: 10px;
-            }
-
-            small {
-                font-weight: 400;
-                font-size: 14px
             }
 
             .call-list {
@@ -155,14 +139,10 @@ $sub-heading: rgba(40, 40, 40, 0.7);
                 }
 
                 p {
-                    font-weight: 500;
-                    font-size: 14px;
                     color: #8E8787;
                 }
 
                 a {
-                    font-weight: 500;
-                    font-size: 14px;
                     color: #8E8787;
                 }
 
@@ -173,7 +153,7 @@ $sub-heading: rgba(40, 40, 40, 0.7);
             }
 
             .call-btn {
-                padding: 8px 16px;
+                // padding: 8px 16px;
                 background: #2397F3;
                 border-radius: 40px;
             }
@@ -202,7 +182,9 @@ $sub-heading: rgba(40, 40, 40, 0.7);
                     background: #EFEFEF;
                     box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.15);
                     border-radius: 10px;
-                    width: 295px;
+                    li {
+                        padding: 5px;
+                    }
                 }
 
                 .card-skeleton {
@@ -212,14 +194,7 @@ $sub-heading: rgba(40, 40, 40, 0.7);
             }
 
             .card-content--right {
-                h2 {
-                    font-weight: 500;
-                    font-size: 32px;
-                }
-
                 p {
-                    font-weight: 400;
-                    font-size: 14px;
                     color: $sub-heading;
                 }
             }
@@ -264,16 +239,8 @@ $sub-heading: rgba(40, 40, 40, 0.7);
 
         .card-right {
             .card-right--content {
-                h2 {
-                    font-weight: 500;
-                    font-size: 32px;
-                    max-width: 400px;
-                }
 
                 p {
-                    font-weight: 400;
-                    font-size: 22px;
-                    max-width: 294px;
                     color: $sub-heading;
                 }
             }
@@ -283,7 +250,6 @@ $sub-heading: rgba(40, 40, 40, 0.7);
             background: #EFEFEF;
             box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
-            width: 265px;
         }
     }
 
@@ -389,16 +355,8 @@ $sub-heading: rgba(40, 40, 40, 0.7);
 
         .colab-left {
             .colab-left--content {
-                h2 {
-                    font-weight: 500;
-                    font-size: 40px;
-                }
-
                 p {
-                    font-weight: 400;
-                    font-size: 18px;
                     color: $sub-heading;
-                    max-width: 394px;
                 }
             }
         }
@@ -414,15 +372,7 @@ $sub-heading: rgba(40, 40, 40, 0.7);
         border-radius: 30px;
 
         .bottom-right--content {
-            h2 {
-                font-weight: 500;
-                font-size: 40px;
-                text-align: center;
-            }
-
             p {
-                font-weight: 400;
-                font-size: 18px;
                 color: $sub-heading;
                 text-align: center;
                 max-width: 584px;
@@ -437,15 +387,13 @@ $sub-heading: rgba(40, 40, 40, 0.7);
                 color: #FFFFFF;
             }
 
-            img {
-                border-bottom-right-radius: 30px;
-            }
+            
         }
-
-        .bottom-left {
-            img {
-                border-top-left-radius: 30px;
-            }
+        img {
+            border-top-left-radius: 30px;
+        }
+        img {
+            border-bottom-right-radius: 30px;
         }
     }
 }
@@ -456,31 +404,23 @@ $sub-heading: rgba(40, 40, 40, 0.7);
     .footer-row--one {
         .footer-left {
             p {
-                font-weight: 400;
-                font-size: 18px;
                 color: #FFFFFF;
                 max-width: 287px;
             }
         }
 
         .footer-mid {
-            font-weight: 400;
-            font-size: 18px;
             color: #FFFFFF;
         }
 
         .footer-right {
             label {
-                font-weight: 500;
-                font-size: 20px;
                 color: #FFFFFF;
             }
 
             input {
                 background: #FFFFFF;
                 border-radius: 30px;
-                font-weight: 500;
-                font-size: 18px;
             }
 
             button {
@@ -495,14 +435,31 @@ $sub-heading: rgba(40, 40, 40, 0.7);
     }
 
     .footer-row--two {
-        font-weight: 400;
-        font-size: 16px;
         color: #FFFFFF;
     }
 
     .footer-row--three {
-        font-weight: 400;
-        font-size: 16px;
         color: #FFFFFF;
     }
+}
+
+/** Mobile responsive*/
+.mob-nav {
+    li {
+        padding: 10px 0;
+        border-bottom: 1px solid white;
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    .btn {
+        padding: 5px 30px;
+        background-color: $btn-color;
+        border-radius: 30px;
+        color: white;
+    }
+
 }

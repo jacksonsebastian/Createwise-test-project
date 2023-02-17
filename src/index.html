@@ -12,9 +12,9 @@
 
 <body>
     <!-- Header Section Start -->
-    
+
     <header class="head-bg h-20 flex">
-        <nav class="flex justify-around items-center container m-auto">
+        <nav class="flex justify-between items-center px-3 container m-auto">
             <div class="logo flex items-center">
                 <svg class="mr-3" width="27" height="34" viewBox="0 0 27 34" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@
                         fill="#282828" />
                 </svg>
             </div>
-            <ul class="flex">
+            <ul class="lg:flex hidden">
                 <li><a href="#">Products</a></li>
                 <li class="mx-11"><a href="#">Plans</a></li>
                 <li><a href="#"><span>more</span> <svg class="inline-block ml-2" width="10" height="7"
@@ -75,22 +75,47 @@
                                 fill="#282828" />
                         </svg></a></li>
             </ul>
-            <ul class="flex">
+            <ul class="lg:flex hidden">
                 <li class="mr-9"><a href="#">Login</a></li>
                 <li><a class="px-8 py-3 btn" href="#">Request a demo</a></li>
             </ul>
+
+            <a class="lg:hidden" onclick="menuClick()" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </a>
         </nav>
     </header>
+
+    <!-- Mobile Nav -->
+
+    <nav class="hidden flex flex-col text-center lg:hidden bg-gray-300" id="mob-menu">
+        <ul class="mob-nav">
+            <li><a href="#">Products</a></li>
+            <li class=""><a href="#">Plans</a></li>
+            <li><a href="#"><span>more</span> <svg class="inline-block ml-2" width="10" height="7" viewBox="0 0 10 7"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.16169 2.66167L4.18335 5.68334C4.63835 6.13834 5.37335 6.13834 5.82835 5.68334L8.85002 2.66167C9.58502 1.92667 9.06002 0.666672 8.02169 0.666672H1.97835C0.940019 0.666672 0.426686 1.92667 1.16169 2.66167Z"
+                            fill="#282828" />
+                    </svg></a></li>
+            <li class=""><a href="#">Login</a></li>
+            <li><a class="btn" href="#">Request a demo</a></li>
+        </ul>
+    </nav>
     <!-- Header Section End -->
 
     <!-- Hero content start -->
     <section class="hero-section">
-        <div class="hero-content pt-20 container m-auto">
-            <h2>Medical Software To Attract And <span>Retain Patients</span> </h2>
-            <p class="pt-7">Patientgrid’s communication platform helps improve <br> patient experience while staff
+        <div class="hero-content lg:pt-20 pt-6 container m-auto">
+            <h2 class="text-2xl font-medium lg:font-medium lg:text-7xl  text-center">Medical Software To Attract And <span class="font-bold lg:text-7xl">Retain Patients</span> </h2>
+            <p class="text-sm pt-4  lg:pt-7 lg:font-medium text-center lg:text-2xl ">Patientgrid’s communication platform helps improve <br> patient experience while staff
                 hours.</p>
             <ul class="flex justify-center items-center pt-10">
-                <li class="mr-3"><a href="#">Start For Free</a></li>
+                <li class="mr-3"><a class="text-lg font-medium lg:text-2xl lg:font-medium" href="#">Start For Free</a></li>
                 <li>
                     <a href="#">
                         <button class="btn flex items-center justify-center h-8 w-8 b ">
@@ -109,20 +134,20 @@
     <!-- Hero content End -->
 
     <!-- Home Section Satrt -->
-    <section class="home-sec pt-16 pb-32 flex justify-center">
-        <div id="background-div"></div>
-        <div class="home-card w-4/5 p-10 bg-white flex justify-around container m-auto">
-            <div class="w-1/5 home-card--left">
+    <section class="home-sec pt-16 pb-12 lg:pb-32 flex justify-center">
+        <div class="hidden lg:block" id="background-div"></div>
+        <div class="home-card w-11/12 lg:w-4/5 p-4 lg:p-10 bg-white lg:flex justify-around container m-auto">
+            <div class="lg:w-1/5 home-card--left">
                 <img src="./images/logo/Logo.png" alt="patientgrid">
-                <h2 class="mt-10">Amanda Charles</h2>
-                <div class="h-4 mt-3 animate-pulse bg-gray-400 rounded-xl flex justify-end items-center pr-1">
+                <h2 class="mt-4 lg:mt-10">Amanda Charles</h2>
+                <div class="h-2 lg:h-4 mt-3 animate-pulse bg-gray-400 rounded-xl flex justify-end items-center pr-1">
                     <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M0.532493 1.7825L2.47499 3.725C2.76749 4.0175 3.23999 4.0175 3.53249 3.725L5.47499 1.7825C5.94749 1.31 5.60999 0.5 4.94249 0.5H1.05749C0.389993 0.5 0.0599928 1.31 0.532493 1.7825Z"
                             fill="#6D6767" />
                     </svg>
                 </div>
-                <ul class="flex items-center mt-10">
+                <ul class="flex items-center mt-4 lg:mt-10">
                     <li><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M2.58332 17.25C2.07915 17.25 1.6474 17.0706 1.28807 16.7119C0.929346 16.3526 0.749985 15.9208 0.749985 15.4167V2.58333C0.749985 2.07917 0.929346 1.64742 1.28807 1.28808C1.6474 0.929361 2.07915 0.75 2.58332 0.75H15.4167C15.9208 0.75 16.3526 0.929361 16.7119 1.28808C17.0706 1.64742 17.25 2.07917 17.25 2.58333V15.4167C17.25 15.9208 17.0706 16.3526 16.7119 16.7119C16.3526 17.0706 15.9208 17.25 15.4167 17.25H2.58332ZM8.99998 12.6667C9.58054 12.6667 10.1076 12.4986 10.5812 12.1625C11.0548 11.8264 11.3833 11.3833 11.5667 10.8333H15.4167V2.58333H2.58332V10.8333H6.43332C6.61665 11.3833 6.94512 11.8264 7.41873 12.1625C7.89235 12.4986 8.41943 12.6667 8.99998 12.6667Z"
@@ -131,19 +156,19 @@
                     </li>
                     <li><a class="ml-5" href="#">Inbox</a></li>
                 </ul>
-                <ul class="mt-7 ">
-                    <li class="mb-9 h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
-                    <li class="mb-9 h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
-                    <li class="mb-9 h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
-                    <li class="mb-9 h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
-                    <li class="h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
+                <ul class="mt-4 lg:mt-7 ">
+                    <li class="mb-4 h-2 lg:mb-9 lg:h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
+                    <li class="mb-4 h-2 lg:mb-9 lg:h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
+                    <li class="mb-4 h-2 lg:mb-9 lg:h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
+                    <li class="mb-4 h-2 lg:mb-9 lg:h-4 w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
+                    <li class="mb-4 h-2 lg:h-4  w-3/4 animate-pulse bg-gray-400 rounded-xl"></li>
                 </ul>
             </div>
-            <div class="w-auto">
+            <div class="w-auto hidden lg:block">
                 <hr class=" h-full border-gray-400 border-solid">
             </div>
-            <div class="w-3/4 home-card--right">
-                <ul class="mb-8 flex items-center">
+            <div class="lg:w-3/4 home-card--right">
+                <ul class="mb-5 lg:mb-8 flex items-center">
                     <li><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3.05127 25.6923C2.27563 25.6923 1.6114 25.4164 1.05858 24.8645C0.506699 24.3117 0.230759 23.6474 0.230759 22.8718V3.12819C0.230759 2.35255 0.506699 1.68832 1.05858 1.1355C1.6114 0.583618 2.27563 0.307678 3.05127 0.307678H22.7949C23.5705 0.307678 24.2347 0.583618 24.7876 1.1355C25.3394 1.68832 25.6154 2.35255 25.6154 3.12819V22.8718C25.6154 23.6474 25.3394 24.3117 24.7876 24.8645C24.2347 25.4164 23.5705 25.6923 22.7949 25.6923H3.05127ZM12.9231 18.641C13.8162 18.641 14.6271 18.3825 15.3558 17.8654C16.0844 17.3483 16.5897 16.6667 16.8718 15.8205H22.7949V3.12819H3.05127V15.8205H8.97435C9.2564 16.6667 9.76174 17.3483 10.4904 17.8654C11.219 18.3825 12.0299 18.641 12.9231 18.641Z"
@@ -153,30 +178,30 @@
                     <li class="inbox"><a class="ml-8" href="#">Inbox</a></li>
                 </ul>
                 <hr>
-                <div class="flex mt-4">
+                <div class="lg:flex mt-4">
                     <div class="mr-9 flex items-center">
-                        <p class="mr-5">Older:</p>
-                        <button class="filter-btn--first">Newest</button>
-                        <button class="filter-btn">Oldest</button>
+                        <p class="text-sm font-normal mr-2 lg:mr-5">Older:</p>
+                        <button class="text-xs mr-1 p-1 first-btn lg:py-1 lg:text-base lg:px-2 lg:mr-3">Newest</button>
+                        <button class="text-xs p-1 second-btn lg:py-1 lg:text-base lg:px-2 lg:mr-3">Oldest</button>
                     </div>
-                    <div class="flex items-center">
-                        <p class="mr-5">Filter:</p>
-                        <button class="filter-btn--first">All</button>
-                        <button class="filter-btn">Calls</button>
-                        <button class="filter-btn">SMS</button>
-                        <button class="filter-btn">Voicemails</button>
+                    <div class="mt-2 lg:mt-0 flex items-center">
+                        <p class="text-sm font-normal mr-2 lg:mr-5">Filter:</p>
+                        <button class="text-xs mr-1 p-1 first-btn lg:py-1 lg:text-base lg:px-2 lg:mr-3">All</button>
+                        <button class="text-xs mr-1 p-1 second-btn lg:py-1 lg:text-base lg:px-2 lg:mr-3">Calls</button>
+                        <button class="text-xs mr-1 p-1 second-btn lg:py-1 lg:text-base lg:px-2 lg:mr-3">SMS</button>
+                        <button class="text-xs mr-1 p-1 second-btn lg:py-1 lg:text-base lg:px-2 lg:mr-3">Voicemails</button>
                     </div>
                 </div>
-                <ul class="flex justify-between filter-label mt-7 p-2 pl-12 pr-40">
+                <ul class="text-sm flex justify-between filter-label mt-7 p-2 lg:pl-12 lg:pr-40">
                     <li>Name</li>
                     <li>LastContact</li>
                 </ul>
-                <div class="call-list mt-6 flex justify-between items-center p-3 pr-40">
+                <div class="call-list mt-3 lg:mt-6 flex justify-between items-center p-3 lg:pr-40">
                     <ul class="flex items-center">
-                        <li class="mr-6"><img src="./images/Profile/profile-1.png" alt=""></li>
-                        <li><a href="tel: (305) 440-0858">(305) 440-0858</a></li>
+                        <li class="mr-1 lg:mr-6"><img src="./images/Profile/profile-1.png" alt=""></li>
+                        <li><a class="text-xs lg:text-sm lg:font-medium" href="tel: (305) 440-0858">(305) 440-0858</a></li>
                     </ul>
-                    <button class="call-btn flex justify-center items-center">
+                    <button class="call-btn py-1 px-2 lg:py-2 lg:px-4 flex justify-center items-center">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.7063 12.425L13.1063 11.025C13.2948 10.8388 13.5334 10.7113 13.793 10.6581C14.0526 10.6048 14.3221 10.6281 14.5688 10.725L16.275 11.4063C16.5243 11.5074 16.738 11.6801 16.8893 11.9026C17.0405 12.125 17.1226 12.3873 17.125 12.6563V15.7813C17.1236 15.9643 17.0851 16.1451 17.0119 16.3128C16.9388 16.4805 16.8324 16.6317 16.6993 16.7573C16.5662 16.8828 16.409 16.9801 16.2373 17.0433C16.0655 17.1065 15.8828 17.1343 15.7 17.125C3.74377 16.3813 1.33127 6.25628 0.875023 2.38128C0.853843 2.19099 0.873194 1.99837 0.931803 1.81609C0.990411 1.63382 1.08695 1.46602 1.21506 1.32374C1.34318 1.18145 1.49997 1.0679 1.67512 0.990565C1.85027 0.913227 2.03981 0.873851 2.23127 0.875026H5.25002C5.5194 0.875823 5.78239 0.957193 6.00514 1.10867C6.2279 1.26015 6.40025 1.4748 6.50002 1.72503L7.18127 3.43128C7.28143 3.67694 7.30698 3.94668 7.25474 4.20678C7.2025 4.46689 7.07477 4.70584 6.88752 4.89378L5.48752 6.29378C5.48752 6.29378 6.29377 11.75 11.7063 12.425Z"
@@ -184,14 +209,14 @@
                         </svg>
                         <span class="ml-2 text-white">1</span>
                     </button>
-                    <p>20 Hours Ago</p>
+                    <p class="text-xs lg:text-sm lg:font-medium">20 Hours Ago</p>
                 </div>
-                <div class="call-list mt-6 flex justify-between items-center p-3 pr-40">
+                <div class="call-list mt-3 lg:mt-6 flex justify-between items-center p-3 lg:pr-40">
                     <ul class="flex items-center">
-                        <li class="mr-6"><img src="./images/Profile/profile-3.png" alt=""></li>
-                        <li><a href="tel: (304) 450-0258">(304) 450-0258</a></li>
+                        <li class="mr-1 lg:mr-6"><img src="./images/Profile/profile-3.png" alt=""></li>
+                        <li><a class="text-xs lg:text-sm lg:font-medium" href="tel: (304) 450-0258">(304) 450-0258</a></li>
                     </ul>
-                    <button class="call-btn flex justify-center items-center">
+                    <button class="call-btn py-1 px-2 lg:py-2 lg:px-4 flex justify-center items-center">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.7063 12.425L13.1063 11.025C13.2948 10.8388 13.5334 10.7113 13.793 10.6581C14.0526 10.6048 14.3221 10.6281 14.5688 10.725L16.275 11.4063C16.5243 11.5074 16.738 11.6801 16.8893 11.9026C17.0405 12.125 17.1226 12.3873 17.125 12.6563V15.7813C17.1236 15.9643 17.0851 16.1451 17.0119 16.3128C16.9388 16.4805 16.8324 16.6317 16.6993 16.7573C16.5662 16.8828 16.409 16.9801 16.2373 17.0433C16.0655 17.1065 15.8828 17.1343 15.7 17.125C3.74377 16.3813 1.33127 6.25628 0.875023 2.38128C0.853843 2.19099 0.873194 1.99837 0.931803 1.81609C0.990411 1.63382 1.08695 1.46602 1.21506 1.32374C1.34318 1.18145 1.49997 1.0679 1.67512 0.990565C1.85027 0.913227 2.03981 0.873851 2.23127 0.875026H5.25002C5.5194 0.875823 5.78239 0.957193 6.00514 1.10867C6.2279 1.26015 6.40025 1.4748 6.50002 1.72503L7.18127 3.43128C7.28143 3.67694 7.30698 3.94668 7.25474 4.20678C7.2025 4.46689 7.07477 4.70584 6.88752 4.89378L5.48752 6.29378C5.48752 6.29378 6.29377 11.75 11.7063 12.425Z"
@@ -199,14 +224,14 @@
                         </svg>
                         <span class="ml-2 text-white">7</span>
                     </button>
-                    <p>01 Hours Ago</p>
+                    <p class="text-xs lg:text-sm lg:font-medium">01 Hours Ago</p>
                 </div>
-                <div class="call-list mt-6 flex justify-between items-center p-3 pr-40">
+                <div class="call-list mt-3 lg:mt-6 flex justify-between items-center p-3 lg:pr-40">
                     <ul class="flex items-center">
-                        <li class="mr-6"><img src="./images/Profile/profile-2.png" alt=""></li>
-                        <li><a href="tel: (325) 240-0998">(325) 240-0998</a></li>
+                        <li class="mr-1 lg:mr-6"><img src="./images/Profile/profile-2.png" alt=""></li>
+                        <li><a class="text-xs lg:text-sm lg:font-medium" href="tel: (325) 240-0998">(325) 240-0998</a></li>
                     </ul>
-                    <button class="call-btn flex justify-center items-center">
+                    <button class="call-btn py-1 px-2 lg:py-2 lg:px-4 flex justify-center items-center">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.7063 12.425L13.1063 11.025C13.2948 10.8388 13.5334 10.7113 13.793 10.6581C14.0526 10.6048 14.3221 10.6281 14.5688 10.725L16.275 11.4063C16.5243 11.5074 16.738 11.6801 16.8893 11.9026C17.0405 12.125 17.1226 12.3873 17.125 12.6563V15.7813C17.1236 15.9643 17.0851 16.1451 17.0119 16.3128C16.9388 16.4805 16.8324 16.6317 16.6993 16.7573C16.5662 16.8828 16.409 16.9801 16.2373 17.0433C16.0655 17.1065 15.8828 17.1343 15.7 17.125C3.74377 16.3813 1.33127 6.25628 0.875023 2.38128C0.853843 2.19099 0.873194 1.99837 0.931803 1.81609C0.990411 1.63382 1.08695 1.46602 1.21506 1.32374C1.34318 1.18145 1.49997 1.0679 1.67512 0.990565C1.85027 0.913227 2.03981 0.873851 2.23127 0.875026H5.25002C5.5194 0.875823 5.78239 0.957193 6.00514 1.10867C6.2279 1.26015 6.40025 1.4748 6.50002 1.72503L7.18127 3.43128C7.28143 3.67694 7.30698 3.94668 7.25474 4.20678C7.2025 4.46689 7.07477 4.70584 6.88752 4.89378L5.48752 6.29378C5.48752 6.29378 6.29377 11.75 11.7063 12.425Z"
@@ -214,14 +239,14 @@
                         </svg>
                         <span class="ml-2 text-white">2</span>
                     </button>
-                    <p>10 Hours Ago</p>
+                    <p class="text-xs lg:text-sm lg:font-medium">10 Hours Ago</p>
                 </div>
-                <div class="call-list mt-6 flex justify-between items-center p-3 pr-40">
+                <div class="call-list mt-3 lg:mt-6 flex justify-between items-center p-3 lg:pr-40">
                     <ul class="flex items-center">
-                        <li class="mr-6"><img src="./images/Profile/profile-4.png" alt=""></li>
-                        <li><a href="tel: (225) 440-0458">(225) 440-0458</a></li>
+                        <li class="mr-1 lg:mr-6"><img src="./images/Profile/profile-2.png" alt=""></li>
+                        <li><a class="text-xs lg:text-sm lg:font-medium" href="tel: (225) 440-0458">(225) 440-0458</a></li>
                     </ul>
-                    <button class="call-btn flex justify-center items-center">
+                    <button class="call-btn py-1 px-2 lg:py-2 lg:px-4 flex justify-center items-center">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M11.7063 12.425L13.1063 11.025C13.2948 10.8388 13.5334 10.7113 13.793 10.6581C14.0526 10.6048 14.3221 10.6281 14.5688 10.725L16.275 11.4063C16.5243 11.5074 16.738 11.6801 16.8893 11.9026C17.0405 12.125 17.1226 12.3873 17.125 12.6563V15.7813C17.1236 15.9643 17.0851 16.1451 17.0119 16.3128C16.9388 16.4805 16.8324 16.6317 16.6993 16.7573C16.5662 16.8828 16.409 16.9801 16.2373 17.0433C16.0655 17.1065 15.8828 17.1343 15.7 17.125C3.74377 16.3813 1.33127 6.25628 0.875023 2.38128C0.853843 2.19099 0.873194 1.99837 0.931803 1.81609C0.990411 1.63382 1.08695 1.46602 1.21506 1.32374C1.34318 1.18145 1.49997 1.0679 1.67512 0.990565C1.85027 0.913227 2.03981 0.873851 2.23127 0.875026H5.25002C5.5194 0.875823 5.78239 0.957193 6.00514 1.10867C6.2279 1.26015 6.40025 1.4748 6.50002 1.72503L7.18127 3.43128C7.28143 3.67694 7.30698 3.94668 7.25474 4.20678C7.2025 4.46689 7.07477 4.70584 6.88752 4.89378L5.48752 6.29378C5.48752 6.29378 6.29377 11.75 11.7063 12.425Z"
@@ -229,7 +254,7 @@
                         </svg>
                         <span class="ml-2 text-white">3</span>
                     </button>
-                    <p>10 Hours Ago</p>
+                    <p class="text-xs lg:text-sm lg:font-medium">10 Hours Ago</p>
                 </div>
             </div>
         </div>
@@ -241,13 +266,13 @@
     <section class="card-section">
 
         <!-- *** Section first Group **** -->
-        <div class="group w-4/6 flex container m-auto mb-36">
+        <div class="group lg:w-4/6 flex flex-col lg:flex-row container mb-12 m-auto lg:mb-36">
             <!-- Card left Start -->
-            <div class="card-left w-3/6 flex justify-center">
-                <div class="card flex flex-col items-center">
-                    <div class="card-overlay-one"></div>
+            <div class="card-left lg:w-3/6 order-2 lg:order-1 flex justify-center">
+                <div class="mx-5 lg:m-0 card rounded-xl flex flex-col items-center">
+                    <div class="card-overlay-one hidden lg:block"></div>
                     <!-- Card Left Content Starts-->
-                    <ul class=" flex justify-between ratings p-2 mt-10">
+                    <ul class="flex justify-between ratings p-2 mt-7 lg:mt-10">
                         <li>
                             <svg width="41" height="39" viewBox="0 0 41 39" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -289,13 +314,13 @@
                             </svg>
                         </li>
                     </ul>
-                    <div class="card-content flex items-center mt-6">
+                    <div class="card-content flex items-center mt-10 lg:mt-6">
                         <div class="card-content--left">
-                            <img src="./images/card-profile/profile.png" alt="Dr.James L.">
+                            <img class="h-12 w-12 lg:w-full lg:h-full" src="./images/card-profile/profile.png" alt="Dr.James L.">
                         </div>
                         <div class="card-content--right ml-2">
-                            <h2>Dr.James L.</h2>
-                            <p>psychologist, canada</p>
+                            <h2 class="text-sm font-medium lg:text-3xl lg:font-medium">Dr.James L.</h2>
+                            <p class="text-xs font-medium lg:text-sm lg:font-normal">psychologist, canada</p>
                         </div>
                     </div>
                     <div class="card-skeleton h-3 w-4/5 rounded-xl mt-14"></div>
@@ -305,11 +330,11 @@
             <!-- Card Left End -->
 
             <!-- Card right Start -->
-            <div class="card-right w-3/6 flex items-center justify-center">
+            <div class="card-right lg:w-3/6 flex order-1 lg:order-2 items-center justify-center">
                 <!-- Card right Content -->
-                <div class="card-right--content pl-10">
-                    <h2 class="mb-5">Bring new business in by getting more online reviews.</h2>
-                    <p>94% Use review to choose new doctor.</p>
+                <div class="card-right--content lg:pl-10">
+                    <h2 class="text-center lg:text-left text-lg font-medium lg:text-3xl lg:font-medium mb-5">Bring new business in by getting more online reviews.</h2>
+                    <p class="text-center lg:text-left mb-3 lg:mb-0  text-sm font-normal lg:text-xl lg:font-normal">94% Use review to choose new doctor.</p>
                 </div>
             </div>
             <!-- Card right End -->
@@ -317,25 +342,25 @@
 
         <!-- *** Section Second Group *** -->
 
-        <div class="group w-4/6 flex container m-auto mb-36">
+        <div class="group lg:w-4/6 lg:flex container m-auto mb-12 lg:mb-36">
             <!-- Note: Here I using the above code and swapping the contents -->
 
             <!-- Card Left Start -->
-            <div class="card-right w-3/6 flex items-center justify-center">
+            <div class="card-right lg:w-3/6 flex items-center justify-center">
                 <!-- Card Left Content -->
-                <div class="card-right--content pl-10">
-                    <h2 class="mb-5">Save time with collaborative tools and automations.</h2>
-                    <p>15+ Staff hours saved per week.</p>
+                <div class="card-right--content lg:pl-10">
+                    <h2 class="text-center lg:text-left text-lg font-medium lg:text-3xl lg:font-medium mb-5">Save time with collaborative tools and automations.</h2>
+                    <p class="text-center lg:text-left text-sm font-normal mb-5 lg:mb-0 lg:text-xl lg:font-normal">15+ Staff hours saved per week.</p>
                 </div>
             </div>
             <!-- Card Left End  -->
 
             <!-- Card Right Starts -->
-            <div class="card-left w-3/6 flex justify-center">
-                <div class="card flex flex-col items-start px-9">
-                    <div class="card-overlay-two"></div>
-                    <div class="articon absolute -right-10 top-28"><img
-                            src="./images/card-profile/arcticons_automation.png" alt="arcticons"></div>
+            <div class="card-left lg:w-3/6 flex justify-center ">
+                <div class="mx-5 card flex flex-col items-start px-9 overflow-x-hidden">
+                    <div class="card-overlay-two hidden lg:block"></div>
+                    <div class="articon absolute -right-10 top-28">
+                        <img class=" h-20 w-20 lg:h-full lg:w-full" src="./images/card-profile/arcticons_automation.png" alt="arcticons"></div>
                     <!-- Card right Content Starts-->
                     <div class="card-content flex items-center mt-6">
                         <div class=" flex items-center ratings p-2">
@@ -366,40 +391,39 @@
 
         <!-- *** Section Third group ***-->
 
-        <div class="group w-4/6 flex container m-auto">
+        <div class="group lg:w-4/6 flex flex-col lg:flex-row container m-auto">
             <!-- Card Left Start -->
-            <div class="card-left w-3/6 flex justify-center">
-                <div class="card flex flex-col px-12">
-                    <div class="card-overlay-one"></div>
+            <div class="card-left lg:w-3/6 order-2 lg:order-1 flex justify-center">
+                <div class="mx-5 card flex flex-col items-center lg:items-start lg:px-12">
+                    <div class="card-overlay-one hidden lg:block"></div>
                     <!-- Card Left Content Starts-->
                     <div class="card-content flex flex-col items-start mt-6">
-                        <img class="absolute -left-8 top-28" src="./images/card-profile/male.png" alt="male">
-                        <img class="absolute right-3 bottom-7" src="./images/card-profile/female.png" alt="male">
+                        <img class="absolute -left-4 lg:-left-8 top-24 lg:top-28 h-12 w-12 lg:h-auto lg:w-auto" src="./images/card-profile/male.png" alt="male">
+                        <img class="absolute -right-4 lg:right-3 bottom-12 lg:bottom-7 h-12 w-12 lg:h-auto lg:w-auto" src="./images/card-profile/female.png" alt="male">
 
-                        <div class="relative flex flex-col msg-skeleton px-4 py-4 mt-16">
+                        <div class="relative flex flex-col w-56 lg:w-64 msg-skeleton px-4 py-4 mt-10 lg:mt-16">
                             <div class="card-skeleton animate-pulse h-2 w-2/3 rounded-xl"></div>
                             <div class="card-skeleton animate-pulse h-2 w-11/12 rounded-xl my-2"></div>
                             <div class="card-skeleton animate-pulse h-2 w-9/12 rounded-xl "></div>
                             <img class="absolute -left-4 bottom-0" src="./images/card-profile/msg-1.png" alt="">
                         </div>
-                        <div class="relative flex flex-col items-end msg-skeleton px-4 py-4 mt-11">
+                        <div class="relative flex flex-col w-56 lg:w-64 items-end msg-skeleton px-4 py-4 mt-11">
                             <div class="card-skeleton animate-pulse h-2 w-2/3 rounded-xl"></div>
                             <div class="card-skeleton animate-pulse h-2 w-11/12 rounded-xl my-2"></div>
                             <div class="card-skeleton animate-pulse h-2 w-9/12 rounded-xl "></div>
                             <img class="absolute -right-4 bottom-0" src="./images/card-profile/msg-2.png" alt="">
                         </div>
                     </div>
-                    <!-- <div class="card-skeleton h-3 w-4/5 rounded-xl"></div> -->
                     <!-- Card Left Content End-->
                 </div>
             </div>
             <!-- Card Left End -->
             <!-- Card right Start -->
-            <div class="card-right w-3/6 flex items-center justify-center">
+            <div class="card-right lg:w-3/6 flex order-1 lg:order-2 items-center justify-center">
                 <!-- Card right Content -->
-                <div class="card-right--content pl-10">
-                    <h2 class="mb-5">Improve patient experience engaging the way they want.</h2>
-                    <p>90% People prefer texts to phone calls.</p>
+                <div class="card-right--content lg:pl-10">
+                    <h2 class="text-center lg:text-left text-lg font-medium lg:text-3xl lg:font-medium mb-5">Improve patient experience engaging the way they want.</h2>
+                    <p class="text-center lg:text-left mb-3 lg:mb-0  text-sm font-normal lg:text-xl lg:font-normal">90% People prefer texts to phone calls.</p>
                 </div>
             </div>
             <!-- Card right End -->
@@ -408,18 +432,18 @@
     <!-- Card Section end -->
 
     <!-- Colab Section start -->
-    <section class="colab-section pt-24">
-        <div class="colab-card w-4/5 p-10 py-24 flex justify-around container m-auto">
-            <div class="w-3/6 colab-left flex items-center">
-                <div class="colab-left--content ">
-                    <h2>Seamless collaboration for healthcare teams</h2>
-                    <p>With shared inboxes, any team member can resolve the team’s pending tasks. Individual staff
+    <section class="colab-section pt-12 lg:pt-24">
+        <div class="colab-card w-11/12 lg:w-4/5 p-3 lg:p-10 py-10 lg:py-24 lg:flex justify-around container m-auto">
+            <div class="lg:w-3/6 colab-left flex justify-center items-center">
+                <div class="colab-left--content">
+                    <h2 class="text-center lg:text-left text-lg font-medium lg:w-11/12 lg:text-4xl lg:font-medium mb-5">Seamless collaboration for healthcare teams</h2>
+                    <p class="text-center lg:text-left text-sm font-normal lg:w-96 mb-5 lg:text-lg lg:font-normal">With shared inboxes, any team member can resolve the team’s pending tasks. Individual staff
                         member don’t get overwhelmed and patients are always take care of.</p>
                 </div>
             </div>
-            <div class="w-3/6 colab-right">
+            <div class="lg:w-3/6 colab-right">
                 <!-- Call history section start -->
-                <div class="bg-white colab-right--content p-9">
+                <div class="bg-white colab-right--content p-4 lg:p-9">
                     <div class="mb-8 flex justify-between items-center">
                         <ul class="flex items-center">
                             <li><img src="./images/logo/mini-msg-icon.png" alt="message">
@@ -433,13 +457,13 @@
                     </div>
                     <hr>
 
-                    <div class="filter-tab flex mt-2">
+                    <div class="filter-tab lg:flex mt-2">
                         <div class="flex items-center mr-6">
                             <p class="mr-3">Older:</p>
                             <button class="filter-btn--first">Newest</button>
                             <button class="filter-btn">Oldest</button>
                         </div>
-                        <div class="flex items-center">
+                        <div class="flex items-center mt-2 lg:mt-0">
                             <p class="mr-3">Filter:</p>
                             <button class="filter-btn--first">All</button>
                             <button class="filter-btn">Calls</button>
@@ -448,14 +472,14 @@
                         </div>
                     </div>
 
-                    <ul class="flex justify-between filter-label mt-7 p-2 pl-12 pr-16">
+                    <ul class="flex justify-between filter-label mt-7 p-2 lg:pl-12 lg:pr-16">
                         <li>Name</li>
                         <li>LastContact</li>
                     </ul>
 
-                    <div class="call-list mt-6 flex justify-between items-center p-2 pr-16">
+                    <div class="call-list mt-6 flex justify-between items-center p-2 lg:pr-16">
                         <ul class="flex items-center">
-                            <li class="mr-3"><img src="./images/call-filter--profiles/profile-1.png" alt="user"></li>
+                            <li class="lg:mr-3"><img src="./images/call-filter--profiles/profile-1.png" alt="user"></li>
                             <li><a href="tel: (305) 440-0858">(305) 440-0858</a></li>
                         </ul>
                         <button class="call-btn flex justify-center items-center">
@@ -469,7 +493,7 @@
                         </button>
                         <p>10 Hours Ago</p>
                     </div>
-                    <div class="call-list mt-6 flex justify-between items-center p-2 pr-16">
+                    <div class="call-list mt-6 flex justify-between items-center p-2 lg:pr-16">
                         <ul class="flex items-center">
                             <li class="mr-3"><img src="./images/call-filter--profiles/profile-2.png" alt="user"></li>
                             <li><a href="tel: (325) 240-0998">(304) 450-0258</a></li>
@@ -485,7 +509,7 @@
                         </button>
                         <p>10 Hours Ago</p>
                     </div>
-                    <div class="call-list mt-6 flex justify-between items-center p-2 pr-16">
+                    <div class="call-list mt-6 flex justify-between items-center p-2 lg:pr-16">
                         <ul class="flex items-center">
                             <li class="mr-3"><img src="./images/call-filter--profiles/profile-2.png" alt="user"></li>
                             <li><a href="tel: (325) 240-0998">(325) 240-0998</a></li>
@@ -501,7 +525,7 @@
                         </button>
                         <p>10 Hours Ago</p>
                     </div>
-                    <div class="call-list mt-6 flex justify-between items-center p-2 pr-16">
+                    <div class="call-list mt-6 flex justify-between items-center p-2 lg:pr-16">
                         <ul class="flex items-center">
                             <li class="mr-3"><img src="./images/call-filter--profiles/profile-4.png" alt="user"></li>
                             <li><a href="tel: (225) 440-0458">(225) 440-0458</a></li>
@@ -526,28 +550,26 @@
 
     <!-- bottom section start -->
     <section class="bottom-section pt-20 pb-28 bg-black">
-        <div class="bottom-card w-4/5 p-10 flex container m-auto rounded-x relative">
-
-            <div class="bottom-left w-1/3">
-                <img class="absolute top-0 left-0" src="./images/bottom/corner-left.png" alt="assets">
-                <img class="absolute bottom-0" src="./images/bottom/image.png" alt="image">
+        <div class="bottom-card w-11/12 lg:w-4/5 p-10 flex container justify-center lg:justify-start m-auto rounded-x relative">
+            <img class="absolute top-0 left-0 h-26 w-24 lg:w-auto lg:h-auto" src="./images/bottom/corner-left.png" alt="assets">
+            <div class="bottom-left lg:w-1/3">
+                <img class="absolute left-0 bottom-0 w-48 h-48 lg:w-auto lg:h-auto" src="./images/bottom/image.png" alt="image">
             </div>
-            <div class="bottom-right--content w-4/6 flex flex-col items-center">
-                <h2 class="mb-6">We work on a month-to-month basis, try for free with no commitments</h2>
-                <p class="mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <div class="bottom-right--content lg:w-4/6 flex flex-col items-center z-10">
+                <h2 class="mb-6 text-lg text-center font-medium lg:text-4xl lg:font-medium">We work on a month-to-month basis, try for free with no commitments</h2>
+                <p class="text-sm  lg:text-lg font-normal mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#">14 free trial</a>
-                <img class="absolute right-0 bottom-0" src="./images/bottom/corner-right.png" alt="assets">
+                <a class="mb-36 lg:m-0" href="#">14 free trial</a>
+                <img class="absolute right-0 bottom-0 h-26 w-24 lg:w-auto lg:h-auto" src="./images/bottom/corner-right.png" alt="assets">
             </div>
         </div>
     </section>
     <!-- bottom section end -->
 
-    <footer class="footer pt-20">
-
-        <div class="footer-row--one flex mb-6 container m-auto">
-            <div class="footer-left w-1/3 flex flex-col items-center">
-                <div class="footer-left--content" >
+    <footer class="footer pt-5 lg:pt-20">
+        <div class="footer-row--one flex flex-col lg:flex-row  mb-6 container m-auto">
+            <div class="footer-left lg:w-1/3 flex flex-col items-center">
+                <div class="footer-left--content">
                     <svg width="268" height="48" viewBox="0 0 268 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M37.0465 18.6928C37.0458 21.7044 36.3109 24.6704 34.9057 27.3341C33.5004 29.9977 31.4671 32.2787 28.9817 33.9796C26.4964 35.6804 23.6339 36.7498 20.6421 37.0952C17.6504 37.4405 14.6196 37.0515 11.812 35.9617V18.6928C11.8106 20.18 12.2504 21.6342 13.0756 22.8715C13.9009 24.1088 15.0746 25.0735 16.4482 25.6436C17.8218 26.2137 19.3337 26.3636 20.7925 26.0743C22.2514 25.785 23.5916 25.0695 24.6438 24.0184C25.6959 22.9672 26.4126 21.6276 26.7033 20.1691C26.9939 18.7105 26.8455 17.1985 26.2766 15.8244C25.7078 14.4502 24.7442 13.2756 23.5077 12.4492C22.2712 11.6228 20.8174 11.1817 19.3301 11.1817C18.3429 11.1811 17.3652 11.375 16.4529 11.7525C15.5406 12.13 14.7117 12.6835 14.0135 13.3815C13.3153 14.0795 12.7615 14.9082 12.3837 15.8204C12.006 16.7325 11.8117 17.7102 11.812 18.6974V18.1609H0.0112762C0.165199 13.3062 2.21996 8.70611 5.73291 5.35175C9.24586 1.99739 13.9359 0.157176 18.7926 0.227532C23.6493 0.297887 28.284 2.27319 31.6983 5.7279C35.1126 9.18261 37.0333 13.8402 37.0465 18.6974V18.6928Z"
@@ -593,15 +615,15 @@
                             d="M247.122 16.7807C247.968 15.1604 249.248 13.8071 250.818 12.8713C252.389 11.9356 254.188 11.4541 256.016 11.4807C257.459 11.4874 258.884 11.8016 260.196 12.4025C261.472 12.9427 262.596 13.7847 263.474 14.856V4.41333H268V33.4737H263.474V30.208C262.684 31.3045 261.64 32.1936 260.432 32.7996C259.052 33.4985 257.522 33.8485 255.976 33.8191C254.155 33.8391 252.365 33.3436 250.814 32.3899C249.24 31.4182 247.963 30.0332 247.122 28.3858C246.196 26.5801 245.731 24.5737 245.769 22.5451C245.73 20.5407 246.195 18.5586 247.122 16.7807ZM262.552 18.7339C261.992 17.6909 261.157 16.8216 260.137 16.2209C259.161 15.6494 258.05 15.3508 256.919 15.3562C255.79 15.3505 254.679 15.6422 253.698 16.2018C252.681 16.787 251.846 17.6429 251.285 18.6744C250.644 19.8614 250.325 21.1962 250.361 22.5451C250.33 23.9109 250.649 25.262 251.285 26.4706C251.842 27.5362 252.684 28.4261 253.717 29.0408C254.684 29.6214 255.791 29.9284 256.919 29.9293C258.049 29.9356 259.161 29.6378 260.137 29.067C261.161 28.4625 261.997 27.586 262.552 26.535C263.188 25.333 263.506 23.988 263.474 22.6285C263.509 21.2724 263.191 19.9304 262.552 18.7339Z"
                             fill="white" />
                     </svg>
-                    <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    <ul class="flex mt-5">
+                    <p class="mt-5 text-center lg:text-left text-sm lg:text-lg font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <ul class="flex justify-center lg:justify-start mt-5">
                         <li class="mr-4"><img src="./images/footer-icons/facebook.png" alt="facebook"></li>
                         <li class="mr-4"><img src="./images/footer-icons/twitter.png" alt="twitter"></li>
                         <li><img src="./images/footer-icons/instagram.png" alt="instagram"></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-mid w-1/3 flex flex-col items-center">
+            <div class="footer-mid text-sm lg:text-lg font-medium lg:w-1/3 flex flex-col items-center mt-10 lg:mt-0">
                 <ul class="flex">
                     <li class="mr-3"><img src="./images/footer-icons/phone.png" alt="phone"></li>
                     <li><a href="tel: +91-8853923455">+91-8853923455</a></li>
@@ -615,8 +637,8 @@
                     <li><a href="tel: +91-8853923455">+91-8853923455</a></li>
                 </ul>
             </div>
-            <form class="footer-right w-1/3 flex flex-col items-center">
-                <label class="mb-8 block" for="email">Subscribe Newsletter</label>
+            <form class="footer-right lg:w-1/3 flex flex-col items-center mt-10 lg:mt-0">
+                <label class="text-sm lg:text-xl font-medium  mb-2 lg:mb-8 block" for="email">Subscribe Newsletter</label>
                 <div class="input-container w-72 relative">
                     <button type="button" class="flex items-center justify-center h-11 w-11">
                         <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -625,21 +647,35 @@
                                 fill="white" />
                         </svg>
                     </button>
-                    <input class="py-3 px-5 w-72 outline-none" type="email" id="email" name="email" placeholder="Email">
+                    <input class="text-sm lg:text-lg font-medium py-3 px-5 w-72 outline-none" type="email" id="email" name="email" placeholder="Email">
                 </div>
             </form>
         </div>
         <div class="footer-row--two flex justify-center py-3 border-t border-b border-white border-solid m-auto">
-            <ul class="flex">
+            <ul class="flex text-sm lg:text-base font-normal">
                 <li><a href="#">Products</a></li>
                 <li class="mx-14"><a href="#">Plans</a></li>
                 <li><a href="#">More</a></li>
             </ul>
         </div>
         <div class="footer-row--three flex justify-center pt-3 pb-4">
-            <p><span>&#169;</span> Copyright 2023.All Rights Reserved.</p>
+            <p class="text-sm lg:text-base font-normal"><span>&#169;</span> Copyright 2023.All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function menuClick() {
+            console.log("nav bar")
+            var menu = document.getElementById('mob-menu');
+
+            if(menu.classList.contains('hidden')){
+                menu.classList.remove('hidden');
+            }
+            else {
+                menu.classList.add('hidden')
+            }
+        }
+    </script>
 </body>
 
 </html>
